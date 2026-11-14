@@ -1,5 +1,4 @@
 ## Hi,I'm Zach (stlwtrs)
-*(Github handle: Cyphermux).*
 
 I am a cybersecurity student specializing in **Offensive Security (Red Teaming)** and **Digital Operational Security**.
 
