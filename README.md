@@ -6,19 +6,19 @@ My philosophy is simple: **Silence as many attack vectors as possible without hi
 
 ### Featured Projects
 
-*  **[CopyFix](https://github.com/CypherMux/CopyFix)**
+*  **[CopyFix](https://github.com/Stlwtrs/CopyFix)**
 *  *A Dual-Verification File Integrity Monitor designed to detect memory-resident "Copy Fail" attacks. It hashes the on-disk binary against the in-memory `/proc/<PID>/exe` to catch fileless malware that traditional tools like AIDE miss.*
 
-*  **[My Personal Operational Security Stack](https://github.com/CypherMux/My-Personal-Operational-Security-Stack)**
+*  **[My Personal Operational Security Stack](https://github.com/Stlwtrs/My-Personal-Operational-Security-Stack)**
 *  *A comprehensive and multi-layered security architecture for a daily driver Linux system that I personally use. This stack covers Physical Security, Kernel Hardening, Network Obfuscation, and Financial Privacy.*
 
-*  **[THM Write-Ups](https://github.com/CypherMux?tab=repositories&q=THM-Write-Up)**
+*  **[THM Write-Ups](https://github.com/Stlwtrs?tab=repositories&q=THM-Write-Up)**
 *  *In depth technical walkthroughs of TryHackMe rooms. Focused primarily on explaining the "why" behind the exploit in depth.*
 
-*  **[hextcp](https://github.com/CypherMux/hextcp)**
+*  **[hextcp](https://github.com/Stlwtrs/hextcp)**
 *  *A ~99% native Bash tool designed to parse `/proc/net/tcp` and decode Little-Endian hexadecimal IPs and ports into human-readable output. Includes IPv6 support, UNIX socket support, and Process/PID mapping as well.*
 
-*  **[USBSnitch](https://github.com/CypherMux/USBSnitch)**
+*  **[USBSnitch](https://github.com/Stlwtrs/USBSnitch)**
 *  *A real time desktop notification visualizer for the USBGuard software. Runs as a Python systemd daemon to alert you the second a device is plugged in and whether it was authorized or blocked by USBGuard.*
 
   ### My Arsenal
