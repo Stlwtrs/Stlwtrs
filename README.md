@@ -4,7 +4,7 @@
 
 I build and harden Linux systems, and I write tools that expose what the operating system is actually doing. My work centers on offensive security, host-level detection, and operational security, with the goal of reducing attack surface without sacrificing usability.
 
-[TryHackMe (Top 2%)](https://tryhackme.com/p/stlwtrs) · [LinkedIn](https://www.linkedin.com/in/zachary-white-11a859421/) · [Repositories](https://github.com/Stlwtrs?tab=repositories)
+[TryHackMe (Top 1%)](https://tryhackme.com/p/stlwtrs) · [LinkedIn](https://www.linkedin.com/in/zachary-white-11a859421/) · [Repositories](https://github.com/Stlwtrs?tab=repositories)
 
 ---
 
