@@ -2,9 +2,9 @@
 
 **Cybersecurity Student · Offensive Security · Linux Hardening**
 
-I build and harden Linux systems, and I write tools that expose what the operating system is actually doing. My work centers on offensive security, host-level detection, and operational security, with the goal of reducing attack surface without sacrificing usability.
+I build and harden Linux systems, and I write tools that expose what the operating system is actually doing. My work centers on offensive security, host-level detection, and operational security, with the goal of reducing attack surface without sacrificing usability. Off the clock, I'm building a pixel-art game entirely in code.
 
-[TryHackMe (Top 1%)](https://tryhackme.com/p/stlwtrs) · [LinkedIn](https://www.linkedin.com/in/zachary-white-11a859421/) · [Repositories](https://github.com/Stlwtrs?tab=repositories)
+[TryHackMe (Top 1%)](https://tryhackme.com/p/stlwtrs) · [LinkedIn](https://www.linkedin.com/in/zachary-white-11a859421/) · [Repositories](https://github.com/Stlwtrs?tab=repositories) · [Sponsor my work](https://github.com/sponsors/Stlwtrs)
 
 ---
 
@@ -34,6 +34,7 @@ A security-hardened Arch Linux distribution built from scratch with archiso. Aur
 | Round 1 | 72 | Firewall, AppArmor, auditd, sysctl hardening, core dumps disabled |
 | Round 2 | 75 | Login banner, umask 027, password hashing and quality, protocol blacklist, compiler restriction |
 | Round 3 | 78 | 16-rule auditd ruleset, AIDE baseline, ufw sysctl fix, SSH config permissions |
+| Round 4 | 78 | Copy Fail mitigation (`algif_aead` blocked), CopyFix, USBSnitch and hextcp bundled, AIDE database exclusion |
 
 ### Key Controls
 
@@ -58,6 +59,8 @@ Per-service systemd sandboxing · UEFI and Secure Boot validation · physical ha
 
 ## Security Tooling
 
+All three ship in AuricOS as of hardening round 4.
+
 | Project | Description | Stack |
 | --- | --- | --- |
 | [**CopyFix**](https://github.com/Stlwtrs/CopyFix) | Detects page-cache tampering of setuid/setgid binaries, the footprint of the Copy Fail kernel vulnerability (CVE-2026-31431). Compares cached reads against `O_DIRECT` disk reads byte-for-byte and reports offsets and SHA-256 hashes of both versions. JSON output, defined exit codes, sandboxed systemd timer. | Python (stdlib only) |
@@ -70,7 +73,28 @@ Per-service systemd sandboxing · UEFI and Secure Boot validation · physical ha
 
 **[Personal Operational Security Stack](https://github.com/Stlwtrs/My-Personal-Operational-Security-Stack)** A six-layer security architecture for a Linux daily driver, built around a defined threat model: physical security (Dasharo firmware, Intel ME mitigation, LUKS2, USBGuard), operating system (`linux-hardened`, AppArmor, Btrfs snapshots), network privacy, identity and credentials (self-hosted Vaultwarden), financial privacy, and mobile security (planned). Includes a read-only audit script that verifies the deployed controls.
 
-**TryHackMe Write-Ups** Walkthroughs that document the reasoning behind each step, not only the commands. - [Intermediate Nmap](https://github.com/Stlwtrs/THM-Write-Up-Intermediate-Nmap) - [Net Sec Challenge](https://github.com/Stlwtrs/THM-Write-Up-NetSec-Challenge) - [Red Stone One Carat](https://github.com/Stlwtrs/THM-Write-Up-Red-Stone-One-Carat)
+**TryHackMe Write-Ups** Walkthroughs that document the reasoning behind each step, not only the commands.
+
+- [Intermediate Nmap](https://github.com/Stlwtrs/THM-Write-Up-Intermediate-Nmap)
+- [Net Sec Challenge](https://github.com/Stlwtrs/THM-Write-Up-NetSec-Challenge)
+- [Red Stone One Carat](https://github.com/Stlwtrs/THM-Write-Up-Red-Stone-One-Carat)
+
+---
+
+## Game Development
+
+[![The Thousand Year Crown](https://raw.githubusercontent.com/Stlwtrs/TTYC/main/docs/banner.png)](https://stlwtrs.github.io/TTYC/)
+
+**[The Thousand Year Crown](https://github.com/Stlwtrs/TTYC)** A free pixel-art action platformer that runs in the browser. You rise from the ash of a burned city and climb a ruined kingdom toward a crown that has passed from tyrant to tyrant for a thousand years. No engine, no libraries, and no image or audio files: the art is drawn in code on a low-resolution canvas, and the soundtrack is synthesized live with the Web Audio API.
+
+- **Play it:** [stlwtrs.github.io/TTYC](https://stlwtrs.github.io/TTYC/)
+- **Status:** milestone 5 of 9: five regions, six bosses and four of the six hidden Voices are playable, with three endings planned
+- **Engineering:** rooms as plain-text tile maps, a generator-based cutscene runner, a boss whose second phase lands every attack on the music's beat, and imported save files validated field by field
+- **License:** free to play, all rights reserved so it stays in one official place
+
+**[Aurelith](https://github.com/Stlwtrs/Aurelith)** The five-phase boss fight that started it: a bullet-hell duel with a live-synthesized metal soundtrack, in a single HTML file. It becomes the game's final boss.
+
+> Built with AI assistance (Claude), which drafted most of the code, art, music and dialogue. The direction, design decisions, testing and balance calls are my own.
 
 ---
 
@@ -89,8 +113,13 @@ Per-service systemd sandboxing · UEFI and Secure Boot validation · physical ha
 - Active Directory exploitation, host evasion, and network pivoting
 - CompTIA Security+ certification
 - AuricOS: systemd service sandboxing and UEFI validation
+- The Thousand Year Crown: the Glass Choir, the Ascent, and the finale
 - CLI automation for enumeration and OSINT
 
 ## Approach
 
 Root-cause analysis over running scripts blindly. Every tool and engagement is documented, every security claim is measured, and every limitation is stated.
+
+## Support
+
+Everything here is free. If my work has been useful to you, or you enjoyed the game, you can [sponsor me on GitHub](https://github.com/sponsors/Stlwtrs). Monero and Bitcoin addresses are in the [AuricOS README](https://github.com/Stlwtrs/AuricOS#supporting-auricos), PGP-signed in [`DONATE.asc`](https://github.com/Stlwtrs/AuricOS/blob/main/DONATE.asc).
